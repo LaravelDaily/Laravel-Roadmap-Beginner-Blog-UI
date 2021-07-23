@@ -1,11 +1,16 @@
-@extends('layouts.guest')
+@extends('layouts.app')
 @section('content')
-<section class="latest-posts"> 
     <div class="container">
-      <header> 
-        <h2>About me</h2>
-        <p class="text-big">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      </header>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">About me</div>
+
+                    <div class="card-body">
+                        Something special about me here.
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</section>
 @endsection
