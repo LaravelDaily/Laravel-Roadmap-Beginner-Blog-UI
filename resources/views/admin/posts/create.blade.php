@@ -23,7 +23,7 @@
                     <div class="form-group">
                         <label class="required" for="image">Image</label>
                         <input class="form-control {{ $errors->has('image') ? 'is-invalid' : '' }}" type="file"
-                               name="image" id="image" value="{{ old('image') }}" required>
+                               name="image" id="image" value="{{ old('image') }}">
                         @if($errors->has('image'))
                             <div class="invalid-feedback">
                                 {{ $errors->first('image') }}
@@ -43,13 +43,13 @@
                         <span class="help-block">Separated by comma</span>
                     </div>
                     <div class="form-group">
-                        <label class="required" for="category">Cateogory</label>
-                        <select class="form-control {{ $errors->has('project') ? 'is-invalid' : '' }}" name="category"
+                        <label class="required" for="category">Category</label>
+                        <select class="form-control {{ $errors->has('category') ? 'is-invalid' : '' }}" name="category"
                                 id="category" required>
-                            <option value="#">--- SELECT CATEGORY ---</option>
+                            <option value="0">--- SELECT CATEGORY ---</option>
                             @foreach($categories as $category)
                                 <option value="{{ $category->id }}"
-                                        @if (in_array($category->id, old('category', []))) checked @endif>{{ $category->name }}</option>
+                                    @if ($category->id == old('category')) selected @endif>{{ $category->name }}</option>
                             @endforeach
                         </select>
                         @if($errors->has('category'))
