@@ -13,6 +13,15 @@
         <div class="card">
             <div class="card-header"><i class="fa fa-align-justify"></i> Categories list</div>
             <div class="card-body">
+                @if (session('errors'))
+                    <div class="alert alert-danger" role="alert">
+                        <ul>
+                            @foreach ($errors->all() as $message)
+                                <li>{{ $message }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <table class="table table-responsive-sm table-striped">
                     <thead>
                     <tr>
