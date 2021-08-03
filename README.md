@@ -23,7 +23,7 @@ This is an example demo project that implements majority of the topics required 
 
 **Auth Basics**	
 
-- Starter Kits: Breeze (Tailwind)
+- Starter Kits: Laravel UI (Bootstrap)
 - Default Auth Model and Access its Fields from Anywhere
 - Check Auth in Controller / Blade
 - Auth Middleware
